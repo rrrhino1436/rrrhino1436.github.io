@@ -231,7 +231,7 @@
 </li>
 <li><p>Regression：输出是数值</p>
 </li>
-<li><p>Classification: <strong>RNN</strong> 输出是yes or no(binary) <strong>CNN</strong> 输出multi class ？</p>
+<li><p>Classification: <strong>RNN</strong> 输出是yes or no(binary) <strong>CNN</strong> 输出multi class </p>
 </li>
 <li><p><strong>supervised learning监督学习</strong>:有 labeled data 每一步最应该落子的位置</p>
 </li>
@@ -266,7 +266,7 @@
 </li>
 <li><p>用微分找到好的function……梯度下降？</p>
 </li>
-<li><p>No local optimal？不是看人品？最终找到的都是同一组参数？</p>
+<li><p>No local optimal，不是看人品，最终找到的都是同一组参数</p>
 </li>
 </ul>
 <p><img  
@@ -297,7 +297,40 @@
 <li><p>比较平滑的function对噪音会不太sensitive</p>
 </li>
 </ul>
-<h3 id="L4-Basic-Concept"><a href="#L4-Basic-Concept" class="headerlink" title="L4 Basic Concept"></a>L4 Basic Concept</h3>
+<h3 id="L4-Basic-Concept"><a href="#L4-Basic-Concept" class="headerlink" title="L4 Basic Concept"></a>L4 Basic Concept</h3><ul>
+<li><p>为什么过拟合和欠拟合的model都会造成误差？误差的来源是哪两个方面？</p>
+<blockquote>
+<p>老师给出的答案是从数学层面给出的，那就是说我们假设每一个model都是对数据的一种拟合，而多个model最终是会形成一个“平均model”的。这个平均model的位置与“真实model”之间的差距就是bias偏移量。而bias偏移量又是真正衡量一个“model”是否有用的重要衡量标准。所以bias偏移量越大，模型越垃圾。而高阶model往往会造成其bias偏移量较小（至于这个现象的原因是为什么需要数学解释）。从而导致高阶model（或者说是复杂model）的模型更贴合于数据的真实分布。但是当我们用新的测试集在高阶model上进行预测时，由于高阶model的形态过分贴合训练集数据且高阶model群较为繁杂，其在新的测试集数据上的拟合优度一定不会很好。</p>
+</blockquote>
+<blockquote>
+<p>当我们说一个模型发生了欠拟合，那意味着这个模型在根本层面上就很难很好地反映出数据的特征，有可能需要根本否定之。而当我们说一个模型发生了过拟合，那意味着这个模型在训练集上的训练过程是能非常细微得贴合数据特征的，同时多次训练的model集得出的“平均model”与真实model（即真实数据特征）的bias偏移量是非常小的。这说明这个model是具备使用的可能的。但如果我们继续把这个model放在测试集上进行测试，由于其过分贴合训练集数据，对测试集的预测就表现未必会很好，从而形成偏差。总的来说，欠拟合一般不能忍，过拟合还是可以忍的。但最佳状态是找到一个平衡点。</p>
+</blockquote>
+<blockquote>
+<p>就像决策树模型的剪枝，其实就是减小model的泛化性能的过程，也就是“降维”的过程。</p>
+</blockquote>
+</li>
+<li><p>error due to “bias” and “variance”,偏差，离散</p>
+</li>
+<li><p>简单的model例如y&#x3D;b+w*Xcp,variance会比较小，复杂的就比较大(比较容易受data影响)</p>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\27130\AppData\Roaming\Typora\typora-user-images\image-20230301164058934.png"
+                      alt="image-20230301164058934"
+                ></p>
+<ul>
+<li><p>cross validation交叉验证:把training set训练集分为training set和validation set，找出model，然后加入validation set验证，取avg error</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\27130\AppData\Roaming\Typora\typora-user-images\image-20230301165813018.png"
+                      alt="image-20230301165813018"
+                ></p>
+</li>
+</ul>
+<h3 id="L5-classification"><a href="#L5-classification" class="headerlink" title="L5 classification"></a>L5 classification</h3><h3 id="L6-logistic-regression"><a href="#L6-logistic-regression" class="headerlink" title="L6 logistic regression"></a>L6 logistic regression</h3>
             </div>
 
             
@@ -370,7 +403,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">2023-01-20-李宏毅2020机器学习</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%8E%E5%AE%8F%E6%AF%852020%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">李宏毅2020机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#L1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">L1 机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E6%B2%BF%E7%A0%94%E7%A9%B6"><span class="nav-text">前沿研究</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L2-Rule-of-ML-2020"><span class="nav-text">L2 Rule of ML 2020</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L3-Regression"><span class="nav-text">L3 Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L4-Basic-Concept"><span class="nav-text">L4 Basic Concept</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%8E%E5%AE%8F%E6%AF%852020%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">李宏毅2020机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#L1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">L1 机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E6%B2%BF%E7%A0%94%E7%A9%B6"><span class="nav-text">前沿研究</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L2-Rule-of-ML-2020"><span class="nav-text">L2 Rule of ML 2020</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L3-Regression"><span class="nav-text">L3 Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L4-Basic-Concept"><span class="nav-text">L4 Basic Concept</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L5-classification"><span class="nav-text">L5 classification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L6-logistic-regression"><span class="nav-text">L6 logistic regression</span></a></li></ol></li></ol>
 
     </div>
 </div>
