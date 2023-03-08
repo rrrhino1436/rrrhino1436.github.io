@@ -9,18 +9,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://rrrhino1436.github.io/2023/02/17/2023-02-17-c/"/>
+    <link rel="canonical" href="https://rrrhino1436.github.io/archives/2022/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="2023-02-17 c">
+    <meta property="og:title" content="找西西">
     <meta property="og:description" content="Hexo Theme Redefine">
-    <meta property="og:url" content="https://rrrhino1436.github.io2023/02/17/2023-02-17-c/">
+    <meta property="og:url" content="https://rrrhino1436.github.ioarchives/2022/index.html">
     <meta property="og:image" content="/images/redefine-logo.svg">
     <meta property="og:site_name" content="rhino1436">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="2023-02-17 c">
+    <meta name="twitter:title" content="找西西">
     <meta name="twitter:description" content="Hexo Theme Redefine">
     <meta name="twitter:image" content="/images/redefine-logo.svg">
     <!--- Icon Part-->
@@ -31,7 +31,7 @@
     
     <title>
         
-            2023-02-17 c -
+            归档: 2022 -
         
         rhino1436
     </title>
@@ -173,170 +173,62 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-
-            
-            
-                <div class="article-title">
-                    <h1 class="article-title-regular">2023-02-17 c</h1>
-                </div>
-            
+    <div class="archive-container ">
+        
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
                 
-            
-
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/redefine-avatar.svg">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">Anton Zhao</span>
-                            
-                                <span class="author-label">lol</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-02-17 17:41:52</span>
-        <span class="mobile">2023-02-17 17:41</span>
-    </span>
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/02/27/2023-02-27-%E4%BB%A3%E7%A0%81/"
+                        >2023-02-27-代码</a>
+                        <span class="article-date">02-27</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/20/%E6%9D%8E%E5%AE%8F%E6%AF%85/"
+                        >李宏毅</a>
+                        <span class="article-date">01-20</span>
+                    </li>
+                
+            </ul>
+        </section>
     
-    
-
-    
-    
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
-
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content markdown-body">
-                <h1 id="c-language"><a href="#c-language" class="headerlink" title="c language"></a>c language</h1><h2 id="compile-build"><a href="#compile-build" class="headerlink" title="compile+build"></a><strong>compile+build</strong></h2><ul>
-<li><p>compile：编译，对代码进行语法检查，将程序转化为计算机可执行的二进制文件，生成.obj .o文件，vc++生成.obj文件</p>
-</li>
-<li><p>build：链接，将程序中调用到的类库融合到程序中，生成.exe文件</p>
-</li>
-<li><p>先compile再build</p>
-</li>
-</ul>
-<h2 id="为什么scanf参数要取地址但printf只要参数本身？（TAT）"><a href="#为什么scanf参数要取地址但printf只要参数本身？（TAT）" class="headerlink" title="为什么scanf参数要取地址但printf只要参数本身？（TAT）"></a>为什么scanf参数要取地址但printf只要参数本身？（TAT）</h2><ul>
-<li><p>printf一样可以强制要求取地址, 函数内多一道步骤引用取出数值, 显然没必要，只要取到值就行</p>
-</li>
-<li><p>scanf, 如果传入的参数是值, 没办法修改到原变量，所以必须要取地址</p>
-</li>
-<li><p>scanf前可以用printf输入提示信息……（太久不用真的会忘。。还以为是scanf里输入提示+%d。。）</p>
-</li>
-</ul>
-<h2 id="1和1-0的区别"><a href="#1和1-0的区别" class="headerlink" title="1和1.0的区别"></a>1和1.0的区别</h2><ul>
-<li><p>1.0&#x2F;n和1&#x2F;n的区别取决于n的类型。</p>
-</li>
-<li><p>当n为浮点型，包括double, float类型，这时二者没有区别。都是求n的倒数。</p>
-</li>
-<li><p>当n为整型类型，包括char, short, int, long以及对应的无符号类型</p>
-<ul>
-<li><p>1.0&#x2F;n, 结果为double 类型，为n的倒数。</p>
-</li>
-<li><p>1&#x2F;n， 如果n为1，那么结果为1， n为-1，结果为-1， n为大于1或者&lt;-1的整数时，结果为0。 无论结果如何，其类型均为整型。</p>
-</li>
-</ul>
-</li>
-<li><p>在c语言中除数和被除数有一个为浮点数时结果就是浮点数</p>
-</li>
-</ul>
-
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2022</span>
+                <span class="archive-year-post-count">[2]</span>
             </div>
-
-            
-                <div class="post-copyright-info">
-                    <div class="article-copyright-info-container">
-    <ul>
-        <li>本文标题：2023-02-17 c</li>
-        <li>本文作者：Anton Zhao</li>
-        <li>创建时间：2023-02-17 17:41:52</li>
-        <li>
-            本文链接：https://rrrhino1436.github.io/2023/02/17/2023-02-17-c/
-        </li>
-        <li>
-            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
-        </li>
-    </ul>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2022/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+                        >数据结构</a>
+                        <span class="article-date">11-13</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2022/10/25/%E6%95%B0%E6%8D%AE%E5%BA%93/"
+                        >数据库</a>
+                        <span class="article-date">10-25</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
 </div>
-
-                </div>
-            
-
-            
-
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/02/27/2023-02-27-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%A3%E7%A0%81/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">2023-02-27-机器学习代码</span>
-                                    <span class="post-nav-item">上一篇</span>
-                                </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                            rel="next"
-                            href="/2023/02/17/2023-01-20-%E6%9D%8E%E5%AE%8F%E6%AF%852020%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
-                            >
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">2023-01-20-李宏毅2020机器学习</span>
-                                    <span class="post-nav-item">下一篇</span>
-                                </span>
-                                <span class="right arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-
-            
-        </div>
-
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <div class="toc-title">此页目录</div>
-        <div class="page-title">2023-02-17 c</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#c-language"><span class="nav-text">c language</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#compile-build"><span class="nav-text">compile+build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88scanf%E5%8F%82%E6%95%B0%E8%A6%81%E5%8F%96%E5%9C%B0%E5%9D%80%E4%BD%86printf%E5%8F%AA%E8%A6%81%E5%8F%82%E6%95%B0%E6%9C%AC%E8%BA%AB%EF%BC%9F%EF%BC%88TAT%EF%BC%89"><span class="nav-text">为什么scanf参数要取地址但printf只要参数本身？（TAT）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E5%92%8C1-0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">1和1.0的区别</span></a></li></ol></li></ol>
 
     </div>
 </div>
-            </div>
-        
-    </div>
-</div>
-
 
                 
 
@@ -410,23 +302,6 @@
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="right-bottom-tools page-aside-toggle">
-                <i class="fa-regular fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -523,16 +398,6 @@
 
 
 <div class="post-scripts pjax">
-    
-        
-<script src="/js/tools/toc-toggle.js"></script>
-
-<script src="/js/libs/anime.min.js"></script>
-
-<script src="/js/layouts/toc.js"></script>
-
-<script src="/js/plugins/tabs.js"></script>
-
     
     
 </div>
